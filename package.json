@@ -1,0 +1,30 @@
+{
+  "name": "quick-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/idalavye/quick-notes.git"
+  },
+  "author": "Ibrahim Dagdelen <ibrahim.dagdelen@trendyol.com>",
+  "license": "MIT",
+  "description": "A personal repository for technical notes and software engineering concepts.",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "nodemon --exec ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/idalavye/quick-notes/issues"
+  },
+  "homepage": "https://github.com/idalavye/quick-notes#readme",
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
