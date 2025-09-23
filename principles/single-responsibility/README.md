@@ -242,7 +242,7 @@ interface IUserService {
 }
 ```
 
-### 3. **Fabrika Deseni**
+### 3. **Factory Deseni**
 
 Nesne oluşturmayı iş mantığından ayırır:
 
