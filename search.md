@@ -8,3 +8,4 @@
 8. Command Pattern
 9. Processor, Handler, Service, Controller etc... Namings
 10. Encoder, Decoder
+11. Creational, Behavioral, Structural patterns
