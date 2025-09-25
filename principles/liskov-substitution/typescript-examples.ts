@@ -11,40 +11,40 @@
 // ============================================================================
 
 // ❌ YANLIŞ: LSP ihlali - Yöntem imzası değiştirme
-class Bird {
+class BadBird {
   fly(): void {
     console.log('Flying...');
   }
 }
 
-class Penguin extends Bird {
+class BadPenguin extends BadBird {
   fly(): void {
     throw new Error("Penguins can't fly!"); // LSP ihlali!
   }
 }
 
 // ❌ YANLIŞ: LSP ihlali - Dönüş türü değiştirme
-class Shape {
+class BadShape {
   area(): number {
     return 0;
   }
 }
 
-class Circle extends Shape {
-  area(): string {
-    // LSP ihlali - dönüş türü değişti
-    return 'Circle area';
+class BadCircle extends BadShape {
+  area(): number {
+    // LSP ihlali - davranış değişti (negatif değer döndürüyor)
+    return -1; // Bu LSP ihlali çünkü alan negatif olamaz
   }
 }
 
 // ❌ YANLIŞ: LSP ihlali - Özel durum fırlatma
-class Database {
+class BadDatabase {
   save(data: any): void {
     console.log('Saving data...');
   }
 }
 
-class ReadOnlyDatabase extends Database {
+class BadReadOnlyDatabase extends BadDatabase {
   save(data: any): void {
     throw new Error('Cannot save to read-only database'); // LSP ihlali!
   }

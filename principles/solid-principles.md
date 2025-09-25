@@ -55,15 +55,41 @@ Bu dosya, nesne yönelimli tasarımın beş temel prensibini (SOLID) açıklar v
 
 ## Interface Segregation Principle (ISP)
 
-**Arayüz Ayrım Prensibi**: İstemciler kullanmadıkları arayüzlere bağımlı olmamalı.
+**Arayüz Ayrım Prensibi**: İstemciler kullanmadıkları arayüzlere bağımlı olmamalıdır.
 
-📁 [Detaylı örnekler ve açıklamalar](./interface-segregation/) _(Yakında)_
+📁 [Detaylı örnekler ve açıklamalar](./interface-segregation/)
+
+### Temel Kavramlar
+
+- **Küçük Arayüzler**: Her arayüz tek bir sorumluluğa odaklanmalı
+- **İstemci Odaklı**: Arayüzler istemcilerin ihtiyaçlarına göre tasarlanmalı
+- **Bağımlılık Azaltma**: İstemciler kullanmadıkları metodlara bağımlı olmamalı
+- **Esneklik**: Yeni özellikler mevcut arayüzleri bozmadan eklenebilmeli
+
+### Yaygın İhlaller
+
+- **Büyük Arayüzler**: Monolitik arayüzlerde gereksiz metodlar
+- **Gereksiz Bağımlılıklar**: İstemcilerin kullanmadığı metodlara bağımlılık
+- **Arayüz Kirliliği**: Farklı sorumlulukların aynı arayüzde toplanması
+
+### Çözüm Stratejileri
+
+- **Arayüz Ayrımı**: Büyük arayüzleri küçük parçalara bölme
+- **Fonksiyonel Arayüzler**: Her arayüz tek bir işlev için tasarlanmalı
+- **Composition over Inheritance**: Kalıtım yerine kompozisyon kullanma
 
 ## Dependency Inversion Principle (DIP)
 
-**Bağımlılık Tersine Çevirme Prensibi**: Soyutlamalara bağımlı olunmalı, somut sınıflara değil.
+**Bağımlılık Tersine Çevirme Prensibi**: Soyutlamalara bağımlı olunmalı, somut sınıflara değil. Bağımlılıkları dışarıdan enjekte edin, içeride oluşturmayın.
 
 📁 [Detaylı örnekler ve açıklamalar](./dependency-inversion/) _(Yakında)_
+
+### IoC
+
+DIP, sınıfların somutlara değil soyutlamalara bağımlı olmasını söylerken, IoC bağımlılıkların kontrolünü sınıflardan alıp dışarıya vermeyi ifade eder. ✅
+
+1. DIP = prensip (neden?)
+2. IoC = yaklaşım (nasıl?) - Genelde Dependency injection ile yapılır.
 
 ## SOLID Prensiplerinin Birlikte Kullanımı
 
@@ -82,5 +108,5 @@ Her prensip için ayrı dizinlerde kapsamlı TypeScript örnekleri bulabilirsini
 - [Single Responsibility Examples](./single-responsibility/)
 - [Open/Closed Examples](./open-closed/)
 - [Liskov Substitution Examples](./liskov-substitution/)
-- [Interface Segregation Examples](./interface-segregation/) _(Yakında)_
+- [Interface Segregation Examples](./interface-segregation/)
 - [Dependency Inversion Examples](./dependency-inversion/) _(Yakında)_

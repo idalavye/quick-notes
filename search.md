@@ -6,6 +6,13 @@
 6. Union Types ve Discriminated Unions
 7. Observer Pattern
 8. Command Pattern
-9. Processor, Handler, Service, Controller etc... Namings
+9. Processor, Handler, Service, Notifier, Controller, Validator etc... Namings
 10. Encoder, Decoder
 11. Creational, Behavioral, Structural patterns
+12. Policy pattern
+13. CQRS
+14. IoC
+15. Distributed Systems Patterns
+16. Resilience Patterns
+17. Compensation
+18. Outbox and Saga Pattern
