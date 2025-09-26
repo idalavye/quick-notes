@@ -1,5 +1,5 @@
 1. OOP
-2. Closures
+2. ✅ [Closures](./tools/libraries/closures.md)
 3. Sorting Algorithms (Quick, Merge)
 4. Rate Limiter
 5. Decorator Pattern
@@ -16,3 +16,6 @@
 16. Resilience Patterns
 17. Compensation
 18. Outbox and Saga Pattern
+19. Debouncing
+20. Throttled
+21. CPU Bound & IO Bound
