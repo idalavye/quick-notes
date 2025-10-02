@@ -16,6 +16,7 @@
 16. Resilience Patterns
 17. Compensation
 18. Outbox and Saga Pattern
-19. Debouncing
-20. Throttled
+19. ✅ [Debouncing](./best-practices/performance/debouncing.md)
+20. ✅ [Throttling](./best-practices/performance/throttling.md)
 21. CPU Bound & IO Bound
+22. Sharding
