@@ -20,3 +20,4 @@
 20. ✅ [Throttling](./best-practices/performance/throttling.md)
 21. CPU Bound & IO Bound
 22. Sharding
+23. Idempotent
