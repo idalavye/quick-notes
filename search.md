@@ -21,3 +21,6 @@
 21. CPU Bound & IO Bound
 22. Sharding
 23. Idempotent
+24. Running LLMs with Inference (GPU vs CPU)
+25. LSTM and Isolation Forest
+26. Celebrity Problem - Justin Bieber Olayı
