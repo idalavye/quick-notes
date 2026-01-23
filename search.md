@@ -24,3 +24,5 @@
 24. Running LLMs with Inference (GPU vs CPU)
 25. LSTM and Isolation Forest
 26. Celebrity Problem - Justin Bieber Olayı
+27. Database Sharding
+28. Git worktrees
