@@ -1,3 +1,9 @@
+---
+title: Interface Segregation Principle
+parent: SOLID Principles
+nav_order: 3
+---
+
 # Interface Segregation Principle (ISP)
 
 **Arayüz Ayrım Prensibi**: İstemciler kullanmadıkları arayüzlere bağımlı olmamalıdır.

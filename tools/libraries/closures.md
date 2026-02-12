@@ -1,3 +1,8 @@
+---
+title: Closures
+nav_order: 7
+---
+
 # Closures (Kapanışlar) - Kapsamlı Rehber
 
 ## Closures Nedir?

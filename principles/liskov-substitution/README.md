@@ -1,3 +1,9 @@
+---
+title: Liskov Substitution Principle
+parent: SOLID Principles
+nav_order: 4
+---
+
 # Liskov Substitution Principle (LSP)
 
 **Liskov Yerine Geçme Prensibi**: Alt sınıflar, üst sınıfların yerine kullanılabilmeli ve bu değişiklik programın doğruluğunu bozmamalıdır.

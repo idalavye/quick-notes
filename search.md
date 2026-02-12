@@ -1,3 +1,8 @@
+---
+title: Search / Index
+nav_order: 9
+---
+
 1. OOP
 2. ✅ [Closures](./tools/libraries/closures.md)
 3. Sorting Algorithms (Quick, Merge)

@@ -1,3 +1,8 @@
+---
+title: File Upload Checksum Validation
+nav_order: 6
+---
+
 # File Upload Checksum Validation
 
 Bir dosya bir sistemden diğerine (ör. istemciden sunucuya) yüklenirken, dosyanın bozulmadan veya değiştirilmeden gittiğinden emin olmak için yükleme sırasında hash (checksum) değerleri hesaplanır ve karşılaştırılır.

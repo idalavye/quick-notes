@@ -1,3 +1,8 @@
+---
+title: About
+nav_order: 10
+---
+
 # Quick Notes
 
 A personal repository for technical notes and software engineering concepts.

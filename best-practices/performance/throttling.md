@@ -1,3 +1,8 @@
+---
+title: Throttling
+nav_order: 5
+---
+
 # Throttling (Sınırlama/Kısıtlama)
 
 ## Throttling Nedir?

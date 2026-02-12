@@ -1,3 +1,9 @@
+---
+title: Composition and Inheritance
+parent: Design Patterns
+nav_order: 1
+---
+
 # Composition ve Inheritance
 
 Structural pattern'ler ve OOP tasarımında iki temel yaklaşım vardır: **inheritance** (kalıtım) ve **composition** (bileşim). İkisi de class'ları bir araya getirir ama farklı ilişki türlerini ifade eder.

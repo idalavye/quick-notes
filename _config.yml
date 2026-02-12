@@ -1,0 +1,31 @@
+# GitHub Pages with Just the Docs (project site: idalavye.github.io/quick-notes)
+remote_theme: pmarsceill/just-the-docs
+url: "https://idalavye.github.io"
+baseurl: "/quick-notes"
+
+# Search
+search_enabled: true
+
+# Default front matter: all markdown uses default layout
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+# Exclude non-doc assets from Jekyll
+exclude:
+  - node_modules
+  - dist
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - "*.ts"
+  - .git
+  - .gitignore
+
+# Optional: add plugins if GitHub Pages supports them (search uses built-in)
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter

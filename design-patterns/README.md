@@ -1,3 +1,8 @@
+---
+title: Design Patterns
+nav_order: 2
+---
+
 # Design Pattern Tipleri – Özet
 
 Design pattern'ler **Gang of Four (GoF)** sınıflandırmasına göre **3 ana tipe** ayrılır. Her tip, farklı bir tasarım problemini çözmeye odaklanır.
@@ -53,7 +58,7 @@ Design pattern'ler **Gang of Four (GoF)** sınıflandırmasına göre **3 ana ti
 - **Observer** – Bir değişiklik olduğunda ilgili object'leri otomatik bildirir
 - **Strategy** – Algoritmayı object'ten ayırıp değiştirilebilir yapar
 - **Command** – İstekleri object olarak paketleyip geçmişini tutar / geri alınabilir yapar
-- **State** – Object'in state'ine göre davranışını değiştirir
+- **State** – Object'in state'ine göre davranışını değiştirir → [State](./behavioral/state/state.md)
 - **Chain of Responsibility** – İsteği bir zincirdeki object'lere sırayla iletir
 
 **Ne zaman kullanılır:** Object'ler arası iletişim, state yönetimi veya algoritma seçimi karmaşıklaştığında.

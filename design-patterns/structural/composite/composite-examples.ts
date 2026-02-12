@@ -11,7 +11,8 @@ interface FileSystemComponent {
   getName(): string;
 }
 
-class File implements FileSystemComponent {
+// Leaf (isim global File ile çakışmasın diye FileNode)
+class FileNode implements FileSystemComponent {
   constructor(
     private name: string,
     private size: number,
@@ -38,8 +39,8 @@ class Folder implements FileSystemComponent {
   }
 }
 
-const file1 = new File('readme.txt', 100);
-const file2 = new File('index.ts', 500);
+const file1 = new FileNode('readme.txt', 100);
+const file2 = new FileNode('index.ts', 500);
 const src = new Folder('src');
 src.add(file2);
 const root = new Folder('root');

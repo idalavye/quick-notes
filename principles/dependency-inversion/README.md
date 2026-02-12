@@ -1,3 +1,9 @@
+---
+title: Dependency Inversion Principle
+parent: SOLID Principles
+nav_order: 2
+---
+
 # Dependency Inversion Principle (DIP)
 
 **Bağımlılık Tersine Çevirme Prensibi**: Üst seviye modüller alt seviye modüllere bağımlı olmamalıdır. Her ikisi de soyutlamalara bağımlı olmalıdır.

@@ -1,3 +1,8 @@
+---
+title: Debouncing
+nav_order: 4
+---
+
 # Debouncing (Geciktirme/Erteleme)
 
 ## Debouncing Nedir?

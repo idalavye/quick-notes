@@ -1,3 +1,9 @@
+---
+title: Single Responsibility Principle
+parent: SOLID Principles
+nav_order: 6
+---
+
 # Tek Sorumluluk Prensibi (SRP) Örnekleri
 
 Bu dizin, nesne yönelimli tasarımın beş SOLID prensibinden biri olan Tek Sorumluluk Prensibi'ni (SRP) gösteren kapsamlı TypeScript örneklerini içerir.

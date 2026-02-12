@@ -1,3 +1,9 @@
+---
+title: Composite Pattern
+parent: Design Patterns
+nav_order: 2
+---
+
 # Composite Pattern
 
 **Ne yapar?** Hem tek elemanı hem de eleman gruplarını **aynı şekilde** kullanmana yarar. Klasör içinde dosya var, dosyanın içi yok — ama ikisine de "boyutunu ver" diyebilirsin. İşte Composite bu ağaç yapısını tek tip gibi kullanmayı sağlar.

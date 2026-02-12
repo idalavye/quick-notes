@@ -1,3 +1,8 @@
+---
+title: SOLID Principles
+nav_order: 1
+---
+
 # SOLID Principles
 
 Bu dosya, nesne yönelimli tasarımın beş temel prensibini (SOLID) açıklar ve her biri için kapsamlı TypeScript örnekleri sunar.

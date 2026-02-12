@@ -1,3 +1,9 @@
+---
+title: Open/Closed Principle
+parent: SOLID Principles
+nav_order: 5
+---
+
 # Açık/Kapalı Prensibi (OCP) Örnekleri
 
 Bu dizin, nesne yönelimli tasarımın beş SOLID prensibinden biri olan Açık/Kapalı Prensibi'ni (OCP) gösteren kapsamlı TypeScript örneklerini içerir.
