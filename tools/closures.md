@@ -1,6 +1,7 @@
 ---
 title: Closures
-nav_order: 7
+parent: Tools
+nav_order: 1
 ---
 
 # Closures (Kapanışlar) - Kapsamlı Rehber
@@ -242,7 +243,7 @@ const apiClient = createApiClient({
 - Fonksiyonlar arasında durum paylaşabilirsiniz
 - Global değişkenlerden kaçınabilirsiniz
 
-### 3. Function Factories (Fonksiyon Fabrikaları)
+### 3. Function Factories (Fonksiyon Fabrikası)
 
 - Dinamik olarak fonksiyonlar oluşturabilirsiniz
 - Parametreli fonksiyonlar üretebilirsiniz

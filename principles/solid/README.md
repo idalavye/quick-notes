@@ -1,5 +1,6 @@
 ---
 title: SOLID Principles
+parent: Principles
 nav_order: 1
 ---
 
@@ -11,13 +12,13 @@ Bu dosya, nesne yönelimli tasarımın beş temel prensibini (SOLID) açıklar v
 
 **Tek Sorumluluk Prensibi**: Bir sınıfın sadece bir değişiklik nedeni olmalıdır.
 
-📁 [Detaylı örnekler ve açıklamalar](./single-responsibility/)
+📁 [Detaylı örnekler ve açıklamalar](../single-responsibility/)
 
 ## Open/Closed Principle (OCP)
 
 **Açık/Kapalı Prensibi**: Yazılım varlıkları genişletmeye açık, değişikliğe kapalı olmalıdır.
 
-📁 [Detaylı örnekler ve açıklamalar](./open-closed/)
+📁 [Detaylı örnekler ve açıklamalar](../open-closed/)
 
 ### Temel Kavramlar
 
@@ -37,7 +38,7 @@ Bu dosya, nesne yönelimli tasarımın beş temel prensibini (SOLID) açıklar v
 
 **Liskov Yerine Geçme Prensibi**: Alt sınıflar, üst sınıfların yerine kullanılabilmeli ve bu değişiklik programın doğruluğunu bozmamalıdır.
 
-📁 [Detaylı örnekler ve açıklamalar](./liskov-substitution/)
+📁 [Detaylı örnekler ve açıklamalar](../liskov-substitution/)
 
 ### Temel Kavramlar
 
@@ -62,7 +63,7 @@ Bu dosya, nesne yönelimli tasarımın beş temel prensibini (SOLID) açıklar v
 
 **Arayüz Ayrım Prensibi**: İstemciler kullanmadıkları arayüzlere bağımlı olmamalıdır.
 
-📁 [Detaylı örnekler ve açıklamalar](./interface-segregation/)
+📁 [Detaylı örnekler ve açıklamalar](../interface-segregation/)
 
 ### Temel Kavramlar
 
@@ -87,7 +88,7 @@ Bu dosya, nesne yönelimli tasarımın beş temel prensibini (SOLID) açıklar v
 
 **Bağımlılık Tersine Çevirme Prensibi**: Soyutlamalara bağımlı olunmalı, somut sınıflara değil. Bağımlılıkları dışarıdan enjekte edin, içeride oluşturmayın.
 
-📁 [Detaylı örnekler ve açıklamalar](./dependency-inversion/) _(Yakında)_
+📁 [Detaylı örnekler ve açıklamalar](../dependency-inversion/) _(Yakında)_
 
 ### IoC
 
@@ -110,8 +111,8 @@ Bu prensipler birlikte çalışarak:
 
 Her prensip için ayrı dizinlerde kapsamlı TypeScript örnekleri bulabilirsiniz:
 
-- [Single Responsibility Examples](./single-responsibility/)
-- [Open/Closed Examples](./open-closed/)
-- [Liskov Substitution Examples](./liskov-substitution/)
-- [Interface Segregation Examples](./interface-segregation/)
-- [Dependency Inversion Examples](./dependency-inversion/) _(Yakında)_
+- [Single Responsibility Examples](../single-responsibility/)
+- [Open/Closed Examples](../open-closed/)
+- [Liskov Substitution Examples](../liskov-substitution/)
+- [Interface Segregation Examples](../interface-segregation/)
+- [Dependency Inversion Examples](../dependency-inversion/) _(Yakında)_

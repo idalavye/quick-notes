@@ -1,6 +1,7 @@
 ---
 title: Debouncing
-nav_order: 4
+parent: Best Practices
+nav_order: 1
 ---
 
 # Debouncing (Geciktirme/Erteleme)

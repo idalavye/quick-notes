@@ -1,6 +1,7 @@
 ---
 title: File Upload Checksum Validation
-nav_order: 6
+parent: Best Practices
+nav_order: 3
 ---
 
 # File Upload Checksum Validation

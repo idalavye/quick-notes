@@ -1,10 +1,11 @@
 ---
 title: Search / Index
-nav_order: 9
+parent: Index
+nav_order: 2
 ---
 
 1. OOP
-2. ✅ [Closures](./tools/libraries/closures.md)
+2. ✅ [Closures](../tools/closures.md)
 3. Sorting Algorithms (Quick, Merge)
 4. Rate Limiter
 5. Decorator Pattern
@@ -21,8 +22,8 @@ nav_order: 9
 16. Resilience Patterns
 17. Compensation
 18. Outbox and Saga Pattern
-19. ✅ [Debouncing](./best-practices/performance/debouncing.md)
-20. ✅ [Throttling](./best-practices/performance/throttling.md)
+19. ✅ [Debouncing](../best-practices/performance/debouncing.md)
+20. ✅ [Throttling](../best-practices/performance/throttling.md)
 21. CPU Bound & IO Bound
 22. Sharding
 23. Idempotent

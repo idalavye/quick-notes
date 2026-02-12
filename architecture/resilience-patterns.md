@@ -1,6 +1,7 @@
 ---
 title: Resilience Patterns
-nav_order: 3
+parent: Architecture
+nav_order: 1
 ---
 
 # Microservices Resilience Patterns

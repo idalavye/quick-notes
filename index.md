@@ -11,11 +11,11 @@ A personal repository for technical notes and software engineering concepts.
 
 ## Sections
 
-- **[Principles](principles/solid-principles.md)** — SOLID, Clean Code, and related principles
+- **[Principles](principles/README.md)** — SOLID, Clean Code, and related principles
 - **[Design Patterns](design-patterns/README.md)** — Creational, structural, and behavioral patterns (Composite, State, composition & inheritance)
-- **[Architecture](architecture/microservices/resilience-patterns.md)** — Microservices, resilience, and architecture patterns
-- **[Best Practices](best-practices/performance/debouncing.md)** — Performance (debouncing, throttling), security, and guidelines
-- **[Tools](tools/libraries/closures.md)** — Frameworks and libraries
+- **[Architecture](architecture/README.md)** — Microservices, resilience, and architecture patterns
+- **[Best Practices](best-practices/README.md)** — Performance (debouncing, throttling), security, and guidelines
+- **[Tools](tools/README.md)** — Frameworks and libraries
 
 ## Usage
 

@@ -1,6 +1,7 @@
 ---
 title: Throttling
-nav_order: 5
+parent: Best Practices
+nav_order: 2
 ---
 
 # Throttling (Sınırlama/Kısıtlama)
