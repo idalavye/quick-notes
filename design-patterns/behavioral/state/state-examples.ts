@@ -118,16 +118,9 @@ machine.selectDrink(); // İçecek verildi.
 machine.selectDrink(); // Önce para atın.
 
 // ============== Örnek 3 (Advanced): E-ticaret siparişi — iptal, iade, teslim ==============
-console.log("\n--- Örnek 3 (Advanced): E-ticaret siparişi ---");
+console.log('\n--- Örnek 3 (Advanced): E-ticaret siparişi ---');
 
-type AdvancedOrderStateName =
-  | "PENDING"
-  | "PAID"
-  | "PROCESSING"
-  | "SHIPPED"
-  | "DELIVERED"
-  | "CANCELLED"
-  | "REFUNDED";
+type AdvancedOrderStateName = 'PENDING' | 'PAID' | 'PROCESSING' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED' | 'REFUNDED';
 
 interface AdvancedOrderState {
   cancel(ctx: AdvancedOrder): void;
@@ -141,7 +134,7 @@ class AdvancedOrder {
   constructor(
     public state: AdvancedOrderState,
     public orderId: string,
-    public amount: number
+    public amount: number,
   ) {}
 
   cancel() {
@@ -167,14 +160,14 @@ class PendingAdv implements AdvancedOrderState {
     order.state = new CancelledAdv();
   }
   ship() {
-    console.log("  Önce ödeme alınmalı.");
+    console.log('  Önce ödeme alınmalı.');
   }
   deliver() {}
   refund() {
-    console.log("  Ödenmemiş sipariş iade edilemez.");
+    console.log('  Ödenmemiş sipariş iade edilemez.');
   }
   status(): AdvancedOrderStateName {
-    return "PENDING";
+    return 'PENDING';
   }
 }
 
@@ -188,81 +181,81 @@ class PaidAdv implements AdvancedOrderState {
     order.state = new ShippedAdv();
   }
   deliver() {
-    console.log("  Önce kargoya verilmeli.");
+    console.log('  Önce kargoya verilmeli.');
   }
   refund(order: AdvancedOrder) {
     console.log(`  [${order.orderId}] İade işlendi (${order.amount} TL).`);
     order.state = new RefundedAdv();
   }
   status(): AdvancedOrderStateName {
-    return "PAID";
+    return 'PAID';
   }
 }
 
 class ProcessingAdv implements AdvancedOrderState {
   cancel(order: AdvancedOrder) {
-    console.log("  Hazırlık aşamasında, iptal için destek ile iletişime geçin.");
+    console.log('  Hazırlık aşamasında, iptal için destek ile iletişime geçin.');
   }
   ship(order: AdvancedOrder) {
     console.log(`  [${order.orderId}] Kargoya verildi.`);
     order.state = new ShippedAdv();
   }
   deliver() {
-    console.log("  Henüz kargoya verilmedi.");
+    console.log('  Henüz kargoya verilmedi.');
   }
   refund() {
-    console.log("  Önce iptal veya kargo sonrası iade talebi oluşturulmalı.");
+    console.log('  Önce iptal veya kargo sonrası iade talebi oluşturulmalı.');
   }
   status(): AdvancedOrderStateName {
-    return "PROCESSING";
+    return 'PROCESSING';
   }
 }
 
 class ShippedAdv implements AdvancedOrderState {
   cancel() {
-    console.log("  Kargo yolda, iptal için kargo iade edilmeli.");
+    console.log('  Kargo yolda, iptal için kargo iade edilmeli.');
   }
   ship() {
-    console.log("  Zaten kargoya verildi.");
+    console.log('  Zaten kargoya verildi.');
   }
   deliver(order: AdvancedOrder) {
     console.log(`  [${order.orderId}] Teslim alındı olarak işlendi.`);
     order.state = new DeliveredAdv();
   }
   refund() {
-    console.log("  Teslim sonrası iade talebi oluşturulabilir.");
+    console.log('  Teslim sonrası iade talebi oluşturulabilir.');
   }
   status(): AdvancedOrderStateName {
-    return "SHIPPED";
+    return 'SHIPPED';
   }
 }
 
 class DeliveredAdv implements AdvancedOrderState {
   cancel() {
-    console.log("  Teslim edildi, iptal yapılamaz.");
+    console.log('  Teslim edildi, iptal yapılamaz.');
   }
   ship() {}
   deliver() {
-    console.log("  Zaten teslim edildi.");
+    console.log('  Zaten teslim edildi.');
   }
   refund(order: AdvancedOrder) {
     console.log(`  [${order.orderId}] İade kabul edildi (${order.amount} TL).`);
     order.state = new RefundedAdv();
   }
   status(): AdvancedOrderStateName {
-    return "DELIVERED";
+    return 'DELIVERED';
   }
 }
 
 class CancelledAdv implements AdvancedOrderState {
   cancel() {
-    console.log("  Zaten iptal edildi.");
+    console.log('  Zaten iptal edildi.');
   }
   ship() {}
   deliver() {}
   refund() {}
   status(): AdvancedOrderStateName {
-    return "CANCELLED";
+    return 'CANCELLED';
   }
 }
 
@@ -271,27 +264,27 @@ class RefundedAdv implements AdvancedOrderState {
   ship() {}
   deliver() {}
   refund() {
-    console.log("  Zaten iade edildi.");
+    console.log('  Zaten iade edildi.');
   }
   status(): AdvancedOrderStateName {
-    return "REFUNDED";
+    return 'REFUNDED';
   }
 }
 
-const advOrder = new AdvancedOrder(new PendingAdv(), "ORD-101", 299.99);
+const advOrder = new AdvancedOrder(new PendingAdv(), 'ORD-101', 299.99);
 advOrder.cancel();
-console.log("  Durum:", advOrder.getStatus());
+console.log('  Durum:', advOrder.getStatus());
 
-const paidOrder = new AdvancedOrder(new PaidAdv(), "ORD-102", 150);
+const paidOrder = new AdvancedOrder(new PaidAdv(), 'ORD-102', 150);
 paidOrder.ship();
 paidOrder.deliver();
 paidOrder.refund();
-console.log("  Durum:", paidOrder.getStatus());
+console.log('  Durum:', paidOrder.getStatus());
 
 // ============== Örnek 4 (Advanced): İçerik / doküman onay akışı ==============
-console.log("\n--- Örnek 4 (Advanced): Doküman onay akışı ---");
+console.log('\n--- Örnek 4 (Advanced): Doküman onay akışı ---');
 
-type DocumentStateName = "DRAFT" | "IN_REVIEW" | "APPROVED" | "REJECTED" | "PUBLISHED";
+type DocumentStateName = 'DRAFT' | 'IN_REVIEW' | 'APPROVED' | 'REJECTED' | 'PUBLISHED';
 
 interface DocumentState {
   submit(ctx: ContentDoc): void;
@@ -305,7 +298,7 @@ class ContentDoc {
   constructor(
     public state: DocumentState,
     public title: string,
-    public version: number = 1
+    public version: number = 1,
   ) {}
 
   submit() {
@@ -331,53 +324,53 @@ class Draft implements DocumentState {
     doc.state = new InReview();
   }
   approve() {
-    console.log("  Taslak onaylanamaz, önce gönderin.");
+    console.log('  Taslak onaylanamaz, önce gönderin.');
   }
   reject() {
-    console.log("  Taslak reddedilemez.");
+    console.log('  Taslak reddedilemez.');
   }
   publish() {
-    console.log("  Yayınlamak için önce onay alınmalı.");
+    console.log('  Yayınlamak için önce onay alınmalı.');
   }
   status(): DocumentStateName {
-    return "DRAFT";
+    return 'DRAFT';
   }
 }
 
 class InReview implements DocumentState {
   submit() {
-    console.log("  Zaten incelemede.");
+    console.log('  Zaten incelemede.');
   }
   approve(doc: ContentDoc) {
     console.log(`  [${doc.title}] Onaylandı.`);
     doc.state = new Approved();
   }
   reject(doc: ContentDoc, reason?: string) {
-    console.log(`  [${doc.title}] Reddedildi${reason ? `: ${reason}` : "."}`);
+    console.log(`  [${doc.title}] Reddedildi${reason ? `: ${reason}` : '.'}`);
     doc.state = new Rejected();
   }
   publish() {
-    console.log("  Önce onaylanmalı.");
+    console.log('  Önce onaylanmalı.');
   }
   status(): DocumentStateName {
-    return "IN_REVIEW";
+    return 'IN_REVIEW';
   }
 }
 
 class Approved implements DocumentState {
   submit() {}
   approve() {
-    console.log("  Zaten onaylı.");
+    console.log('  Zaten onaylı.');
   }
   reject() {
-    console.log("  Onaylı doküman reddedilemez; revizyon için taslağa alın.");
+    console.log('  Onaylı doküman reddedilemez; revizyon için taslağa alın.');
   }
   publish(doc: ContentDoc) {
     console.log(`  [${doc.title}] v${doc.version} yayınlandı.`);
     doc.state = new Published();
   }
   status(): DocumentStateName {
-    return "APPROVED";
+    return 'APPROVED';
   }
 }
 
@@ -388,16 +381,16 @@ class Rejected implements DocumentState {
     doc.state = new Draft();
   }
   approve() {
-    console.log("  Reddedilen doküman tekrar incelemeye gönderilmeli.");
+    console.log('  Reddedilen doküman tekrar incelemeye gönderilmeli.');
   }
   reject() {
-    console.log("  Zaten reddedildi.");
+    console.log('  Zaten reddedildi.');
   }
   publish() {
-    console.log("  Reddedilen doküman yayınlanamaz.");
+    console.log('  Reddedilen doküman yayınlanamaz.');
   }
   status(): DocumentStateName {
-    return "REJECTED";
+    return 'REJECTED';
   }
 }
 
@@ -406,27 +399,27 @@ class Published implements DocumentState {
   approve() {}
   reject() {}
   publish() {
-    console.log("  Zaten yayında.");
+    console.log('  Zaten yayında.');
   }
   status(): DocumentStateName {
-    return "PUBLISHED";
+    return 'PUBLISHED';
   }
 }
 
-const doc = new ContentDoc(new Draft(), "API Rehberi");
+const doc = new ContentDoc(new Draft(), 'API Rehberi');
 doc.submit();
-doc.reject("Eksik örnekler.");
-console.log("  Durum:", doc.getStatus());
+doc.reject('Eksik örnekler.');
+console.log('  Durum:', doc.getStatus());
 doc.submit(); // Rejected -> Draft (revizyon)
 doc.submit(); // Draft -> InReview
 doc.approve();
 doc.publish();
-console.log("  Durum:", doc.getStatus());
+console.log('  Durum:', doc.getStatus());
 
 // ============== Örnek 5 (Advanced): Abonelik / subscription state ==============
-console.log("\n--- Örnek 5 (Advanced): Abonelik ---");
+console.log('\n--- Örnek 5 (Advanced): Abonelik ---');
 
-type SubscriptionStateName = "TRIAL" | "ACTIVE" | "PAST_DUE" | "SUSPENDED" | "CANCELLED";
+type SubscriptionStateName = 'TRIAL' | 'ACTIVE' | 'PAST_DUE' | 'SUSPENDED' | 'CANCELLED';
 
 interface SubscriptionState {
   activate(ctx: Subscription): void;
@@ -441,7 +434,7 @@ class Subscription {
   constructor(
     public state: SubscriptionState,
     public planId: string,
-    public billingDay: number
+    public billingDay: number,
   ) {}
 
   activate() {
@@ -470,25 +463,25 @@ class Trial implements SubscriptionState {
     sub.state = new ActiveSub();
   }
   charge() {
-    console.log("  Deneme süresinde ücret alınmaz.");
+    console.log('  Deneme süresinde ücret alınmaz.');
     return false;
   }
   paymentFailed() {}
   suspend() {
-    console.log("  Deneme askıya alınamaz.");
+    console.log('  Deneme askıya alınamaz.');
   }
   cancel(sub: Subscription) {
     console.log(`  [${sub.planId}] Deneme iptal edildi.`);
     sub.state = new CancelledSub();
   }
   status(): SubscriptionStateName {
-    return "TRIAL";
+    return 'TRIAL';
   }
 }
 
 class ActiveSub implements SubscriptionState {
   activate() {
-    console.log("  Zaten aktif.");
+    console.log('  Zaten aktif.');
   }
   charge(sub: Subscription) {
     console.log(`  [${sub.planId}] Ödeme alındı (fatura günü: ${sub.billingDay}).`);
@@ -507,13 +500,13 @@ class ActiveSub implements SubscriptionState {
     sub.state = new CancelledSub();
   }
   status(): SubscriptionStateName {
-    return "ACTIVE";
+    return 'ACTIVE';
   }
 }
 
 class PastDueSub implements SubscriptionState {
   activate() {
-    console.log("  Önce ödeme yapılmalı.");
+    console.log('  Önce ödeme yapılmalı.');
   }
   charge(sub: Subscription) {
     console.log(`  [${sub.planId}] Ödeme alındı, abonelik tekrar aktif.`);
@@ -531,13 +524,13 @@ class PastDueSub implements SubscriptionState {
     sub.state = new CancelledSub();
   }
   status(): SubscriptionStateName {
-    return "PAST_DUE";
+    return 'PAST_DUE';
   }
 }
 
 class SuspendedSub implements SubscriptionState {
   activate() {
-    console.log("  Önce ödeme yapıp askı kaldırılmalı.");
+    console.log('  Önce ödeme yapıp askı kaldırılmalı.');
   }
   charge(sub: Subscription) {
     console.log(`  [${sub.planId}] Ödeme alındı, abonelik yeniden aktif.`);
@@ -546,13 +539,13 @@ class SuspendedSub implements SubscriptionState {
   }
   paymentFailed() {}
   suspend() {
-    console.log("  Zaten askıda.");
+    console.log('  Zaten askıda.');
   }
   cancel(sub: Subscription) {
     sub.state = new CancelledSub();
   }
   status(): SubscriptionStateName {
-    return "SUSPENDED";
+    return 'SUSPENDED';
   }
 }
 
@@ -564,17 +557,17 @@ class CancelledSub implements SubscriptionState {
   paymentFailed() {}
   suspend() {}
   cancel() {
-    console.log("  Zaten iptal edildi.");
+    console.log('  Zaten iptal edildi.');
   }
   status(): SubscriptionStateName {
-    return "CANCELLED";
+    return 'CANCELLED';
   }
 }
 
-const sub = new Subscription(new Trial(), "pro-monthly", 15);
-console.log("  Durum:", sub.getStatus());
+const sub = new Subscription(new Trial(), 'pro-monthly', 15);
+console.log('  Durum:', sub.getStatus());
 sub.activate();
 sub.paymentFailed();
-console.log("  Durum:", sub.getStatus());
+console.log('  Durum:', sub.getStatus());
 sub.charge();
-console.log("  Durum:", sub.getStatus());
+console.log('  Durum:', sub.getStatus());

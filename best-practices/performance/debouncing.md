@@ -174,7 +174,6 @@ function SearchComponent() {
 ## Best Practices
 
 1. **Uygun Süre Seçimi**:
-
    - Arama: 300-500ms
    - Resize: 100-250ms
    - Button click: 300ms

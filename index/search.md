@@ -24,12 +24,13 @@ nav_order: 2
 18. Outbox and Saga Pattern
 19. ✅ [Debouncing](../best-practices/performance/debouncing.md)
 20. ✅ [Throttling](../best-practices/performance/throttling.md)
-21. CPU Bound & IO Bound
-22. Sharding
-23. Idempotent
-24. Running LLMs with Inference (GPU vs CPU)
-25. LSTM and Isolation Forest
-26. Celebrity Problem - Justin Bieber Olayı
-27. Database Sharding
-28. Git worktrees
-29. Dark launch
+21. ✅ [Big O Notation](../best-practices/performance/big-o/big-o-notation.md)
+22. CPU Bound & IO Bound
+23. Sharding
+24. Idempotent
+25. Running LLMs with Inference (GPU vs CPU)
+26. LSTM and Isolation Forest
+27. Celebrity Problem - Justin Bieber Olayı
+28. Database Sharding
+29. Git worktrees
+30. Dark launch
