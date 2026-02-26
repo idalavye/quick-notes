@@ -1,0 +1,64 @@
+---
+description: Quick-notes yeni içerik kuralları — index güncelleme, İngilizce terimler, front matter. Session başında ve yeni not eklerken uygula.
+globs: "**/*.md"
+alwaysApply: true
+---
+
+# Quick Notes — Yeni İçerik ve Session Kuralları
+
+Bu kurallar **yeni bir not veya bölüm eklerken** ve **session başında** uygulanmalıdır. Tüm yeni içeriklerde tutarlılık için takip et.
+
+## 1. Front matter her zaman ekle
+
+Yeni veya taşınan her **sayfa** (`.md`) için dosya başında YAML front matter kullan:
+
+- **title**: Sayfa başlığı (İngilizce, kısa; örn. `Protocol Basics`, `Debouncing`).
+- **parent**: Üst bölümün Cursor’daki başlığı (örn. `Networking`, `Best Practices`, `Index`). Ana bölüm README’leri için `parent` kullanma; sadece `title` ve `nav_order`.
+- **nav_order**: Aynı parent altındaki sıra (sayı). Örn. Networking altında 1, 2, 3…
+
+**Örnek (alt sayfa):**
+
+```yaml
+---
+title: Protocol Basics
+parent: Networking
+nav_order: 1
+---
+```
+
+**Örnek (bölüm README):**
+
+```yaml
+---
+title: Networking
+nav_order: 5
+---
+```
+
+**Özel:** `index.md` için `layout: home` kullan; `index/search.md` gibi Index altı sayfalar için `parent: Index` kullan.
+
+## 2. İngilizce terimler korunsun
+
+- Teknik terimler **İngilizce yazılsın**: HTTP, TCP, UDP, WebSocket, SSE, request, response, connection, protocol, front matter, nav_order, vb.
+- Açıklama metni Türkçe olabilir; terimler İngilizce kalsın (gerekirse parantez içinde Türkçe: “request (istek)”).
+- Dosya yolları, link metinleri ve front matter alanları İngilizce olsun.
+
+## 3. Yeni içerik eklenince index güncelle
+
+**Yeni bir not veya bölüm eklendiğinde:**
+
+1. **index.md** — “Sections” listesine yeni bölümü ekle veya mevcut bölüm açıklamasını güncelle (yeni konu eklendiyse). Format: `- **[Bölüm Adı](path/to/README.md)** — Kısa açıklama`.
+2. **index/search.md** — Yeni sayfa için numaralı bir madde ekle; mümkünse link ver. Örn. `37. [SSE (Server-Sent Events)](../networking/sse.md)`. Öğrenme sırası veya bölüme göre uygun yere koy (Networking blokunda ise o blok içinde).
+
+**Yeni bir bölüm (örn. yeni klasör + README) eklendiğinde:**
+
+- `index.md` Sections’a mutlaka ekle.
+- `index/search.md`’de gerekirse bir “başlık” veya ilk maddeleri ekle.
+
+## 4. Sonraki / Önceki linkleri
+
+Uzun öğrenme sıralarında (örn. Networking) notların sonunda **Sonraki:** ve isteğe bağlı **Önceki:** linkleri kullan; böylece sırayla takip edilebilsin.
+
+---
+
+**Özet:** Yeni içerik = front matter (title, parent, nav_order) + İngilizce terimler + index.md ve index/search.md güncellemesi.

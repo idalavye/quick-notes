@@ -15,6 +15,7 @@ A personal repository for technical notes and software engineering concepts.
 - **[Design Patterns](design-patterns/README.md)** — Creational, structural, and behavioral patterns (Composite, State, composition & inheritance)
 - **[Architecture](architecture/README.md)** — Microservices, resilience, and architecture patterns
 - **[Best Practices](best-practices/README.md)** — Performance (debouncing, throttling), security, and guidelines
+- **[Networking](networking/README.md)** — Protocol, connection, TCP, UDP, HTTP, WebSocket (basitten karmaşığa)
 - **[Tools](tools/README.md)** — Frameworks and libraries
 
 ## Usage
