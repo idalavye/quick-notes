@@ -20,7 +20,7 @@ Design pattern'ler **Gang of Four (GoF)** sınıflandırmasına göre **3 ana ti
 - **Factory** – Object oluşturmayı tek bir yere toplar
 - **Builder** – Karmaşık object'leri adım adım kurar
 - **Singleton** – Tek bir **instance** garanti eder
-- **Prototype** – Mevcut object'ten kopya üretir
+- **Prototype** – Mevcut object'ten kopya üretir → [Prototype](./creational/prototype/prototype.md)
 - **Abstract Factory** – İlişkili object ailelerini birlikte üretir
 
 **Ne zaman kullanılır:** Object yaratma karmaşık, koşula bağlı veya tekrarlı olduğunda.
